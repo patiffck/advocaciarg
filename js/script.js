@@ -15,16 +15,6 @@ menuToggle.addEventListener('mouseleave', scheduleMenuClose);
 navLinksEl.addEventListener('mouseenter', openMenuHover);
 navLinksEl.addEventListener('mouseleave', scheduleMenuClose);
 
-menuToggle.addEventListener('mouseenter', openMenuHover);
-menuToggle.addEventListener('mouseleave', scheduleMenuClose);
-navLinksEl.addEventListener('mouseenter', openMenuHover);
-navLinksEl.addEventListener('mouseleave', scheduleMenuClose);
-
-menuToggle.addEventListener('mouseenter', openMenuHover);
-menuToggle.addEventListener('mouseleave', scheduleMenuClose);
-navLinksEl.addEventListener('mouseenter', openMenuHover);
-navLinksEl.addEventListener('mouseleave', scheduleMenuClose);
-
   const siteHeader = document.querySelector('header');
   function updateHeaderOnScroll(){
     if(window.scrollY > 40){
