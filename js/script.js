@@ -14,7 +14,6 @@ menuToggle.addEventListener('mouseenter', openMenuHover);
 menuToggle.addEventListener('mouseleave', scheduleMenuClose);
 navLinksEl.addEventListener('mouseenter', openMenuHover);
 navLinksEl.addEventListener('mouseleave', scheduleMenuClose);
-
   const siteHeader = document.querySelector('header');
   function updateHeaderOnScroll(){
     if(window.scrollY > 40){
@@ -120,6 +119,19 @@ navLinksEl.addEventListener('mouseleave', scheduleMenuClose);
   captureClose.addEventListener('click', () => {
   captureBar.style.display = 'none';
   });
+}
+
+const testimonialsTrack = document.getElementById('testimonialsTrack');
+const testiPrev = document.getElementById('testiPrev');
+const testiNext = document.getElementById('testiNext');
+if(testimonialsTrack && testiPrev && testiNext){
+  function scrollTestimonials(dir){
+    const card = testimonialsTrack.querySelector('.testimonial');
+    const distance = card.getBoundingClientRect().width + 1;
+    testimonialsTrack.scrollBy({ left: dir * distance, behavior:'smooth' });
+  }
+  testiPrev.addEventListener('click', () => scrollTestimonials(-1));
+  testiNext.addEventListener('click', () => scrollTestimonials(1));
 }
   document.querySelectorAll('.faq-q').forEach(btn => {
     btn.addEventListener('click', () => {
